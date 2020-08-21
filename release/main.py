@@ -16,7 +16,6 @@ class LoginForm(QMainWindow):
     def getbili(self):
         r=requests.get("https://v1.hitokoto.cn/")
         msg=json.loads(r.text)
-
         self.ui.showarea.setText(msg["hitokoto"])
 if __name__ == '__main__':
     app = QApplication(sys.argv)
